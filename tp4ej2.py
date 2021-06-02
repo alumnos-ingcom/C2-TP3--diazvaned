@@ -8,6 +8,7 @@
 import tp4ej1 as soporte
 
 
+
 def suma_lenta(numero, otro_numero):
     resultado = (f"{numero}")
     while (otro_numero != 0):      
