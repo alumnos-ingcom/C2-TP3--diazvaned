@@ -14,9 +14,13 @@ def convertir_a_fahrenheit(centigrados):
 def convertir_a_centigrados(fahrenheit):
     centigrados = (fahrenheit-32)/1.8
     return centigrados
-
-if __name__ == "__main__":
+def prueba():
     centigrados = soporte.ingreso_entero("Ingrese la temperatura en grados centigrados: ")
-    print (f"Conversión a fahrenheit: {convertir_a_fahrenheit(centigrados)}")
-    fahrenheit = soporte.ingreso_entero("Ingrese la temperatura en fahrenheit: ")
-    print( f"Conversión a centigrados: {convertir_a_centigrados(fahrenheit)}")
+    centigrados = convertir_a_fahrenheit(centigrados)
+    print (f"Conversión a fahrenheit: {centigrados}")
+    fahrenheit = soporte.ingreso_entero("Ingrese la temperatura en grados fahrenheit: ")
+    fahrenheit = convertir_a_centigrados(fahrenheit)
+    print (f"Conversión a centigrados: {fahrenheit}")
+    
+if __name__ == "__main__":
+    prueba()

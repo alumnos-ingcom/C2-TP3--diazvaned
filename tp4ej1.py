@@ -14,11 +14,11 @@ def ingreso_entero_reintento(mensaje, cantidad_reintentos=5):
             cantidad_reintentos = cantidad_reintentos - 1
     raise IngresoIncorrecto (f"Luego de {intentos}") 
     
-def ingreso_entero_restringido(mensaje, valor_minimo=0, valor_maximo=10):
-    while True:
-        numero = ingreso_entero(mensaje + str(valor_minimo) +" y "+ str(valor_maximo))
-        if (numero >= valor_minimo and numero <= valor_maximo):
-            break
+def ingreso_entero_restringido(mensaje, valor_minimo=0, valor_maximo=10):  
+    numero = ingreso_entero(mensaje + " entre " +str(valor_minimo) +" y "+ str(valor_maximo))
+    if (numero < valor_minimo or numero > valor_maximo):
+        raise IngresoIncorrecto("Número no comprendido en el rango")
+    return numero
         
 
 class IngresoIncorrecto(Exception):
@@ -38,8 +38,10 @@ def ingreso_entero(mensaje):
         raise IngresoIncorrecto("No era un número!") from err
     return entero
 
-
+def prueba():
+    numero = ingreso_entero("Ingrese un numero")
+    print (numero)
 
 if __name__ == "__main__":
-    ingreso_entero_restringido("Ingrese un numero")
+    prueba()
     

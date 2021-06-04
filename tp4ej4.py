@@ -12,14 +12,17 @@ def compara(numero, otro_numero):
     resultado = 0
     if (numero > otro_numero):
         resultado = 1
-    if (numero < otro_numero):
+    elif (numero < otro_numero):
         resultado = -1
-    if (numero == otro_numero):
+    else:
         resultado = 0
     return resultado
 
-
-if __name__ == "__main__":
+def prueba():
     numero = soporte.ingreso_entero("Ingrese un numero")
     otro_numero = soporte.ingreso_entero("Ingrese otro numero")
-    print (compara(numero, otro_numero))
+    comparacion = compara(numero, otro_numero)
+    print (comparacion)
+    
+if __name__ == "__main__":
+    prueba()
