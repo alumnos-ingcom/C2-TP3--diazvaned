@@ -4,31 +4,36 @@
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
 
-
 import tp4ej1 as soporte
 
 
 def minimo(lista):
     n = 0
-    aux = 1
+    aux = 0
     for i in range (len(lista)):
-        if (lista[i] < lista[n]):
-            aux = lista[i]
-            n = n+1
-    return aux
+        for n in range (len(lista)):
+            if (lista[i] < lista[n]):
+                aux = lista[i]
+                lista[i] = lista[n]
+                lista[n] = aux
+        n = n+1
+    return lista
     
 def maximo(lista):
     n = 0
-    aux = 1
+    aux = 0
     for i in range (len(lista)):
-        if (lista[i] > lista[n]):
-            aux = lista[i]
-            n = n+1
-    return aux
+        for n in range (len(lista)):
+            if (lista[i] > lista[n]):
+                aux = lista[n]
+                lista[n] = lista[i]
+                lista[i] = aux
+        n = n+1
+    return lista
 
 def prueba ():
     lista =[]
-    for i in range (5):
+    for i in range (3):
         elemento = soporte.ingreso_entero("Ingrese un numero entero")
         lista.append(elemento)
     min = minimo(lista)
