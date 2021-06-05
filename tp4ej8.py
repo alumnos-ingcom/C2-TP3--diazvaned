@@ -6,10 +6,10 @@
 
 import tp4ej1 as soporte
 
-
-def minimo(lista):
+def ordenar_menor_a_mayor(uno, dos, tres):
     n = 0
     aux = 0
+    lista =[uno,dos,tres]
     for i in range (len(lista)):
         for n in range (len(lista)):
             if (lista[i] < lista[n]):
@@ -17,11 +17,13 @@ def minimo(lista):
                 lista[i] = lista[n]
                 lista[n] = aux
         n = n+1
-    return lista
+    tupla =lista[0], lista[1], lista[2]
+    return tupla
     
-def maximo(lista):
+def ordenar_mayor_a_menor(uno, dos, tres):
     n = 0
     aux = 0
+    lista =[uno,dos,tres]
     for i in range (len(lista)):
         for n in range (len(lista)):
             if (lista[i] > lista[n]):
@@ -29,17 +31,18 @@ def maximo(lista):
                 lista[n] = lista[i]
                 lista[i] = aux
         n = n+1
-    return lista
+    tupla =lista[0], lista[1], lista[2]
+    return tupla
 
 def prueba ():
-    lista =[]
-    for i in range (3):
-        elemento = soporte.ingreso_entero("Ingrese un numero entero")
-        lista.append(elemento)
-    min = minimo(lista)
-    print (f"Minimo: {min}")
-    max = maximo(lista)
-    print (f"Maximo: {max}")
+    uno = soporte.ingreso_entero("Ingrese un numero entero: ")
+    dos = soporte.ingreso_entero("Ingrese un numero entero: ")
+    tres = soporte.ingreso_entero("Ingrese un numero entero: ")
+    
+    min = ordenar_menor_a_mayor(uno, dos, tres)
+    print (f"Menor a mayor: {min}")
+    max = ordenar_mayor_a_menor(uno, dos, tres)
+    print (f"Mayor a menor: {max}")
 
 if __name__ == "__main__":
     prueba()
