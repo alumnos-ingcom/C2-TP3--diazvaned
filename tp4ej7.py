@@ -29,7 +29,7 @@ def prueba():
     dividendo = soporte.ingreso_entero("Ingrese un numero: ")
     divisor = soporte.ingreso_entero("Ingrese otro numero: ")
     resultado = division_lenta(dividendo,divisor)
-    print("Resto y cociente: " ,resultado)  
+    print("Resto: " ,resultado[0]," y Cociente: ", resultado[1])  
 
 if __name__ == "__main__":
     prueba()
