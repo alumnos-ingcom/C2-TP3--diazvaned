@@ -38,7 +38,6 @@ def prueba ():
     uno = soporte.ingreso_entero("Ingrese un numero entero: ")
     dos = soporte.ingreso_entero("Ingrese un numero entero: ")
     tres = soporte.ingreso_entero("Ingrese un numero entero: ")
-    
     min = ordenar_menor_a_mayor(uno, dos, tres)
     print (f"Menor a mayor: {min}")
     max = ordenar_mayor_a_menor(uno, dos, tres)
