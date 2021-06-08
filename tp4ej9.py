@@ -7,11 +7,11 @@ import tp4ej1 as soporte
 
 def es_primo(numero):
     divisor = numero
-    aux = 0
+    resto = 0
     contador = 0
     while (divisor >= 1 and contador < 3):
-        aux = numero % divisor
-        if (aux == 0):
+        resto = numero % divisor
+        if (resto == 0):
             contador = contador + 1
         divisor = divisor -1 
     if contador > 2:
