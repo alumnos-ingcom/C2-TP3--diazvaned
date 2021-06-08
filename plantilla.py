@@ -1,5 +1,5 @@
 ################
-# Martín René - @martinvilu
+# Vanesa Díaz - @diazvaned
 # Plantilla de ejercicio
 # UNRN Andina - Introducción a la Ingenieria en Computación
 ################
